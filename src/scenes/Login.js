@@ -44,7 +44,7 @@ class Login extends Component {
             {authContext.authenticating || this.state.loggingin ?
               <div>Authenticating...</div> :
               <PageWrapper>
-                <img src={require('../resources/logo-white.png')} width={75} alt="Logo" />
+                <img src={'logo-white.png'} width={75} alt="Logo" />
                 <Heading1>Login</Heading1>
                 <FormInput type="text" onChange={this.onTextChange} value={this.state.emailAddress} name="emailAddress" placeholder="Email Address" /><br />
                 <FormInput type="password" onChange={this.onTextChange} value={this.state.password} name="password" placeholder="Password" /><br />

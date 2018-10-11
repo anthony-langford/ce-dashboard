@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthenticationContext from '../contexts/AuthenticationContext';
-import CE from 'cheapreats-node-sdk';
+// import CE from 'cheapreats-node-sdk';
 import PageWrapper from "../components/PageWrapper";
 import Heading1 from "../components/Heading1";
 import Button from "../components/Button";
@@ -33,11 +33,11 @@ class Account extends Component {
             {!authContext.customer ?
               <div>Authenticating...</div> :
               <PageWrapper>
-                <img src={require('../resources/logo-white.png')} width={75} alt="Logo" />
+                <img src={'logo-white.png'} width={75} alt="Logo" />
                 <Heading1>Account</Heading1>
                 <AccountInfoItem>Full Name: {authContext.customer.name}</AccountInfoItem>
                 <AccountInfoItem>Email Address: {authContext.customer.email_address}</AccountInfoItem>
-                <br />
+                <br /> {/* TODO: Why is this here? Needs flexbox */}
                 <Button onClick={authContext.revokeAuthenticationToken}>Logout</Button>
                 <AppStoreBadge />
               </PageWrapper>
