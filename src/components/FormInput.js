@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PRIMARY_FONT } from "../styles/fonts";
+import { PRIMARY_FONT } from '../styles/fonts';
 
 const FormInput = styled.input`
   font-family: ${PRIMARY_FONT};
