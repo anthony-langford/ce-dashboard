@@ -5,6 +5,11 @@ import AuthenticationContext from './contexts/AuthenticationContext';
 import CE from 'cheapreats-node-sdk';
 import FETCH_CUSTOMER_ACCOUNT from "./graphql/FETCH_CUSTOMER_ACCOUNT";
 import Account from "./scenes/Account";
+import styled from 'styled-components';
+
+const Root = styled.div`
+  height: 100%;
+`;
 
 class App extends Component {
 
@@ -71,12 +76,12 @@ class App extends Component {
         revokeAuthenticationToken: this.revokeAuthenticationToken,
         customer: this.state.customer
       }}>
-        <div className="App">
+        <Root className="App">
           <Switch>
             <Route exact path="/login" component={Login} />
             <Route exact path="/account" component={Account} />
           </Switch>
-        </div>
+        </Root>
       </AuthenticationContext.Provider>
     );
   }
