@@ -15,7 +15,7 @@ class Login extends Component {
     this.state = {
       emailAddress: "",
       password: "",
-      loggingin: false
+      loggingIn: false
     };
   }
 
@@ -24,15 +24,15 @@ class Login extends Component {
   };
 
   onLogin = (setAuthenticationToken) => {
-    this.setState({ loggingin: true });
+    this.setState({ loggingIn: true });
     CE.CustomerToken.create(this.state.emailAddress, this.state.password)
       .then(token => {
         setAuthenticationToken(token.body);
-        this.setState({ loggingin: false });
+        this.setState({ loggingIn: false });
       })
       .catch(e => {
         window.alert("Failed to login, please check your username as password.");
-        this.setState({ loggingin: false });
+        this.setState({ loggingIn: false });
       })
   };
 
@@ -41,7 +41,7 @@ class Login extends Component {
       <AuthenticationContext.Consumer>
         {authContext =>
           <React.Fragment>
-            {authContext.authenticating || this.state.loggingin ?
+            {authContext.authenticating || this.state.loggingIn ?
               <div>Authenticating...</div> :
               <PageWrapper>
                 <img src={'logo-white.png'} width={75} alt="Logo" />
