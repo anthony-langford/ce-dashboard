@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { PRIMARY_FONT } from "../styles/fonts";
-import { PRIMARY_COLOR } from "../styles/colours";
+import { PRIMARY_FONT } from '../styles/fonts';
+import { PRIMARY_COLOR } from '../styles/colours';
 
 const Button = styled.button`
   font-family: ${PRIMARY_FONT};

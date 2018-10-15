@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
-import { Route, Switch, withRouter } from "react-router-dom";
-import Login from "./scenes/Login";
+import { Route, Switch, withRouter } from 'react-router-dom';
+import Login from './scenes/Login';
 import AuthenticationContext from './contexts/AuthenticationContext';
 import CE from 'cheapreats-node-sdk';
-import FETCH_CUSTOMER_ACCOUNT from "./graphql/FETCH_CUSTOMER_ACCOUNT";
-import Account from "./scenes/Account";
+import FETCH_CUSTOMER_ACCOUNT from './graphql/FETCH_CUSTOMER_ACCOUNT';
+import Account from './scenes/Account';
 import styled from 'styled-components';
+
+CE.Customer.create({
+  email_address: "anthony.langford@gmail.com",
+  name: "tony",
+  password: "password",
+  phone_number: "1234567890",
+  verification_request_id: "000f90b559",
+  verification_code: "3456",
+  email_preferences: {
+    promotional: false,
+    transactional: false,
+    system: true
+  }
+})
+  .then(data => {
+    console.log("Customer created");
+  })
+  .catch(e => {
+    console.error(e);
+  });
 
 const Root = styled.div`
   height: 100%;

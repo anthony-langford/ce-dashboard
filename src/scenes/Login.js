@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import AuthenticationContext from '../contexts/AuthenticationContext';
 import CE from 'cheapreats-node-sdk';
-import Heading from "../components/Heading";
-import PageWrapper from "../components/PageWrapper";
-import FormInput from "../components/FormInput";
-import Button from "../components/Button";
-import AppStoreBadge from "../components/AppStoreBadges";
+import Heading from '../components/Heading';
+import PageWrapper from '../components/PageWrapper';
+import FormInput from '../components/FormInput';
+import Button from '../components/Button';
+import AppStoreBadge from '../components/AppStoreBadges';
 
 
 class Login extends Component {
