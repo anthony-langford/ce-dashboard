@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const MainContainer = styled.div`
   display: flex;
-  padding-top: 30px;
+  margin-top: 64px;
 `;
 
 const Link = styled.a`

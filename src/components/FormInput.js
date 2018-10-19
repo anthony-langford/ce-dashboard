@@ -8,7 +8,7 @@ const FormInput = styled.input`
   border-radius: 10px;
   border: none;
   outline: none;
-  margin-top: 10px;
+  margin: 16px 0 0;
   padding: 10px 20px 10px 20px;
   width: calc(100% - 40px);
   font-weight: bold;

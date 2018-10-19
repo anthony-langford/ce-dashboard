@@ -46,9 +46,8 @@ class Login extends Component {
               <PageWrapper>
                 <img src={'logo-white.png'} width={75} alt="Logo" />
                 <Heading>Login</Heading>
-                <FormInput type="text" onChange={this.onTextChange} value={this.state.emailAddress} name="emailAddress" placeholder="Email Address" /><br />
-                <FormInput type="password" onChange={this.onTextChange} value={this.state.password} name="password" placeholder="Password" /><br />
-                <br />
+                <FormInput type="text" onChange={this.onTextChange} value={this.state.emailAddress} name="emailAddress" placeholder="Email Address" />
+                <FormInput type="password" onChange={this.onTextChange} value={this.state.password} name="password" placeholder="Password" />
                 <Button onClick={() => this.onLogin(authContext.setAuthenticationToken)}>Login</Button>
                 <AppStoreBadge />
               </PageWrapper>
