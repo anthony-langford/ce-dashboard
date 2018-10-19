@@ -24,7 +24,8 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  onLogin = (setAuthenticationToken) => {
+  onLogin = (event, setAuthenticationToken) => {
+    event.preventDefault();
     this.setState({ loggingIn: true });
     CE.CustomerToken.create(this.state.emailAddress, this.state.password)
       .then(token => {

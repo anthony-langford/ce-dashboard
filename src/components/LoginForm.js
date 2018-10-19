@@ -18,7 +18,7 @@ const LoginForm = ({
     <Form>
       <FormInput type="text" onChange={onTextChange} value={emailAddress} name="emailAddress" placeholder="Email Address" />
       <FormInput type="password" onChange={onTextChange} value={password} name="password" placeholder="Password" />
-      <Button onClick={() => onLogin(authContext.setAuthenticationToken)}>Login</Button>
+      <Button onClick={event => onLogin(event, authContext.setAuthenticationToken)} type="submit">Login</Button>
     </Form>
   );
 };
