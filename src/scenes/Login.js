@@ -3,20 +3,21 @@ import AuthenticationContext from '../contexts/AuthenticationContext';
 import CE from 'cheapreats-node-sdk';
 import Heading from '../components/Heading';
 import PageWrapper from '../components/PageWrapper';
-import FormInput from '../components/FormInput';
-import Button from '../components/Button';
+import LoginForm from '../components/LoginForm';
 import AppStoreBadge from '../components/AppStoreBadges';
-
 
 class Login extends Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       emailAddress: "",
       password: "",
       loggingIn: false
     };
+
+    this.onLogin = this.onLogin.bind(this);
   }
 
   onTextChange = (e) => {
@@ -46,9 +47,7 @@ class Login extends Component {
               <PageWrapper>
                 <img src={'logo-white.png'} width={75} alt="Logo" />
                 <Heading>Login</Heading>
-                <FormInput type="text" onChange={this.onTextChange} value={this.state.emailAddress} name="emailAddress" placeholder="Email Address" />
-                <FormInput type="password" onChange={this.onTextChange} value={this.state.password} name="password" placeholder="Password" />
-                <Button onClick={() => this.onLogin(authContext.setAuthenticationToken)}>Login</Button>
+                <LoginForm authContext={authContext} onTextChange={this.onTextChange} emailAddress={this.state.emailAddress} password={this.state.password} onLogin={this.onLogin} />
                 <AppStoreBadge />
               </PageWrapper>
             }

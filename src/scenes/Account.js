@@ -16,13 +16,12 @@ const AccountInfoItem = styled.div`
     padding-bottom: 10px;
 `;
 
-
 class Account extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    
+    this.state = {};
   }
 
   render() {
