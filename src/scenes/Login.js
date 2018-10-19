@@ -49,7 +49,13 @@ class Login extends Component {
               <PageWrapper>
                 <Logo src={'logo-white.png'} alt="Logo" />
                 <Heading>Login</Heading>
-                <LoginForm authContext={authContext} onTextChange={this.onTextChange} emailAddress={this.state.emailAddress} password={this.state.password} onLogin={this.onLogin} />
+                <LoginForm
+                  authContext={authContext}
+                  onTextChange={this.onTextChange}
+                  emailAddress={this.state.emailAddress}
+                  password={this.state.password}
+                  onLogin={this.onLogin}
+                />
                 <AppStoreBadge />
               </PageWrapper>
             }
