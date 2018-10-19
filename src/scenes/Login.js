@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthenticationContext from '../contexts/AuthenticationContext';
 import CE from 'cheapreats-node-sdk';
+import Logo from '../components/Logo';
 import Heading from '../components/Heading';
 import PageWrapper from '../components/PageWrapper';
 import LoginForm from '../components/LoginForm';
@@ -46,7 +47,7 @@ class Login extends Component {
             {authContext.authenticating || this.state.loggingIn ?
               <div>Authenticating...</div> :
               <PageWrapper>
-                <img src={'logo-white.png'} width={75} alt="Logo" />
+                <Logo src={'logo-white.png'} alt="Logo" />
                 <Heading>Login</Heading>
                 <LoginForm authContext={authContext} onTextChange={this.onTextChange} emailAddress={this.state.emailAddress} password={this.state.password} onLogin={this.onLogin} />
                 <AppStoreBadge />
